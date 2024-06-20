@@ -73,7 +73,7 @@ default_mimetype = "text/html"
 doc_root =
 user_dir =
 
-enable_dl = Off
+enable_dl = On
 
 realpath_cache_size = {{ php_realpath_cache_size }}
 
@@ -199,6 +199,12 @@ session.use_trans_sid = 0
 session.hash_function = 0
 session.hash_bits_per_character = 5
 session.use_strict_mode = 0
+
+redis.session.lock_retries = 10
+redis.session.lock_wait_time = 2000
+session.serialize_handler = igbinary
+session.sid_bits_per_character = 5
+session.sid_length = 26
 
 url_rewriter.tags = "a=href,area=href,frame=src,input=src,form=fakeentry"
 

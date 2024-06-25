@@ -201,10 +201,10 @@ session.hash_bits_per_character = 5
 session.use_strict_mode = 0
 
 redis.session.lock_retries = {{ php_redis_session_lock_retries }}
-redis.session.lock_wait_time = 2000 {{ php_redis_session_lock_wait_time }}
-session.serialize_handler = igbinary {{ php_session_serialize_handler }}
-session.sid_bits_per_character = 5 {{ php_session_sid_bits_per_character}}
-session.sid_length = 26 {{ php_session_sid_length}}
+redis.session.lock_wait_time = {{ php_redis_session_lock_wait_time }}
+session.serialize_handler = {{ php_session_serialize_handler }}
+session.sid_bits_per_character = {{ php_session_sid_bits_per_character}}
+session.sid_length = {{ php_session_sid_length }}
 
 url_rewriter.tags = "a=href,area=href,frame=src,input=src,form=fakeentry"
 
